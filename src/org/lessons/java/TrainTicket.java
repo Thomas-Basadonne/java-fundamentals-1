@@ -1,7 +1,7 @@
 package org.lessons.java;
 
-import java.util.Scanner;
 import java.text.DecimalFormat;
+import java.util.Scanner;
 
 public class TrainTicket {
     public static void main(String[] args) {
@@ -21,13 +21,16 @@ public class TrainTicket {
         //System.out.println(Age);
 
         double TicketPrice = 0;
+        double priceKm = 0.21;
+        double youngSale = 0.8;
+        double oldSale = 0.6;
 
         if (Age < 18) {
-            TicketPrice = (Km * 0.21) * 0.8;
+            TicketPrice = (Km * priceKm) * youngSale;
         } else if (Age > 18 && Age < 65) {
-            TicketPrice = (Km * 0.21);
+            TicketPrice = (Km * priceKm);
         } else if (Age > 65) {
-            TicketPrice = (Km * 0.21) * 0.6;
+            TicketPrice = (Km * priceKm) * oldSale;
         }
 
         //DecimalFormat x formattare il prezzo del biglietto con un massimo di due cifre decimali
